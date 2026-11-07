@@ -4,77 +4,45 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sarath K C — RTL Design &amp; Design Verification</title>
-<meta name="description" content="Sarath K C — M.Tech VLSI student at RVCE, Bengaluru. RTL design and design verification with SystemVerilog, UVM, SVA, functional coverage, and memory verification.">
-<meta name="author" content="Sarath K C">
-<meta name="theme-color" content="#090907">
-
-<!-- Link previews (LinkedIn, WhatsApp, Discord) -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sarath K C — RTL Design &amp; Design Verification">
-<meta property="og:description" content="RTL design and design verification: SystemVerilog, UVM, SVA, functional coverage.">
-<meta property="og:url" content="https://zesty-choux-f5121f.netlify.app/">
-<meta property="og:image" content="https://zesty-choux-f5121f.netlify.app/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-
-<!-- Favicon: "SK" monogram, no extra file needed -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%236c5636'/%3E%3Ctext x='50' y='67' font-size='46' text-anchor='middle' fill='%23e6e2d8' font-family='monospace'%3ESK%3C/text%3E%3C/svg%3E">
-
-<!-- Fonts used by the CSS variables below -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+<meta name="description" content="Sarath K C — M.Tech VLSI student at RVCE, Bengaluru, focused on RTL design and design verification: SystemVerilog, SVA, functional coverage, memory verification.">
 <style>
 :root{
   --bg:#090907; --surface:#11100d; --line:#26221a;
   --brown:#6c5636; --tan:#b59467; --text:#e6e2d8; --muted:#948e7f;
-  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Consolas,monospace;
+  --mono:ui-monospace,"JetBrains Mono","SF Mono",Consolas,monospace;
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-a:focus-visible{outline:2px solid var(--tan);outline-offset:4px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
-
-/* Header */
 header{position:sticky;top:0;z-index:5;background:rgba(9,9,7,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
 nav{display:flex;justify-content:space-between;align-items:center;height:56px}
 .brand{font-family:var(--mono);font-size:14px;letter-spacing:.02em}
 .brand span{color:var(--tan)}
 nav ul{display:flex;gap:26px;list-style:none;font-size:14px;color:var(--muted)}
 nav a:hover{color:var(--text)}
-
-/* Sections */
 section{padding:84px 0;border-bottom:1px solid var(--line)}
 .label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tan);margin-bottom:28px}
+h1{font-weight:600;letter-spacing:-.02em}
+h1 span{display:block}
+h1 .name{font-size:clamp(44px,7vw,68px);line-height:1.05;margin-bottom:18px}
+h1 .role{font-size:clamp(20px,3vw,30px);line-height:1.35;font-weight:500;letter-spacing:-.01em;color:var(--tan)}
 h2{font-size:26px;font-weight:600;letter-spacing:-.01em;margin-bottom:10px}
-h2.spaced{margin-bottom:26px}
 .lead{color:var(--muted);max-width:62ch;margin-top:22px}
-.lead.flush{margin-top:0}
-.intro{color:var(--muted);max-width:62ch;margin-bottom:34px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-
-/* Hero */
 .hero{padding:96px 0 80px}
-.name{font-size:clamp(44px,7vw,68px);font-weight:600;line-height:1.05;letter-spacing:-.02em;margin-bottom:18px}
-.role{font-size:clamp(20px,3vw,30px);line-height:1.35;font-weight:500;letter-spacing:-.01em;color:var(--tan)}
 .meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:34px;font-family:var(--mono);font-size:13px;color:var(--muted)}
 .meta b{color:var(--text);font-weight:500}
 .cta{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
-.btn{display:inline-block;padding:10px 20px;border:1px solid var(--brown);font-size:14px;border-radius:2px;transition:.15s}
+.btn{padding:10px 20px;border:1px solid var(--brown);font-size:14px;border-radius:2px;transition:.15s}
 .btn.fill{background:var(--brown);color:#fff}
 .btn:hover{border-color:var(--tan)}
 .btn.fill:hover{background:#7c6340}
-
-/* Skills */
-.skills{margin-top:24px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:56px}
 .skills dt{font-family:var(--mono);font-size:12px;color:var(--tan);letter-spacing:.08em;text-transform:uppercase;margin-top:22px}
 .skills dt:first-child{margin-top:0}
 .skills dd{margin-top:6px;color:var(--text);font-size:15px}
-
-/* Projects */
 .proj{border-top:1px solid var(--line);padding:34px 0;display:grid;grid-template-columns:200px 1fr;gap:36px}
 .proj:last-child{border-bottom:1px solid var(--line)}
 .proj .side{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.9}
@@ -84,85 +52,48 @@ h2.spaced{margin-bottom:26px}
 .proj ul{margin:14px 0 0 18px;color:var(--muted);font-size:15px}
 .proj li{margin-bottom:4px}
 .proj li::marker{color:var(--brown)}
-.proj-links{margin-top:16px}
-.proj-links a{font-family:var(--mono);font-size:13px;color:var(--tan);border-bottom:1px solid var(--brown);padding-bottom:2px}
-.proj-links a:hover{color:var(--text)}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .tags span{font-family:var(--mono);font-size:12px;padding:3px 10px;border:1px solid var(--line);color:var(--muted);border-radius:2px}
-
-/* Now */
 .now-item{border-top:1px solid var(--line);padding-top:22px;margin-top:22px}
 .now-item .status{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--tan);display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .now-item .status::before{content:"";width:7px;height:7px;background:var(--brown);display:inline-block}
 .now-item h3{font-size:20px;font-weight:600;line-height:1.35}
 .now-item .org{color:var(--muted);font-size:15px;margin-top:6px}
-
-/* Working flow */
 .flow{display:flex;flex-wrap:wrap;gap:0;margin-top:30px;font-family:var(--mono);font-size:13px}
 .flow div{padding:10px 18px;border:1px solid var(--line);margin-right:-1px;color:var(--muted)}
 .flow div.on{border-color:var(--brown);color:var(--text);background:var(--surface)}
-
-/* Education */
 .edu{display:grid;grid-template-columns:200px 1fr;gap:36px;padding:18px 0;border-top:1px solid var(--line)}
-.edu:last-child{border-bottom:1px solid var(--line)}
+.edu:last-of-type{border-bottom:1px solid var(--line)}
 .edu .when{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .edu p{color:var(--muted);font-size:15px}
-
-/* Contact */
-.contact .lead{margin:0 0 22px}
-.contact a.mail{font-size:clamp(22px,4vw,34px);font-weight:600;border-bottom:1px solid var(--brown);padding-bottom:4px;overflow-wrap:anywhere}
+.contact a.mail{font-size:clamp(22px,4vw,34px);font-weight:600;border-bottom:1px solid var(--brown);padding-bottom:4px}
 .contact a.mail:hover{color:var(--tan)}
 .links{display:flex;gap:26px;margin-top:30px;font-family:var(--mono);font-size:13px;color:var(--muted);flex-wrap:wrap}
 .links a:hover{color:var(--tan)}
-
 footer{padding:30px 0;font-family:var(--mono);font-size:12px;color:var(--muted)}
-
-/* Background canvas */
-#bg{position:fixed;inset:0;z-index:0;pointer-events:none;
-  -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.4),#000 75%);mask-image:linear-gradient(90deg,rgba(0,0,0,.4),#000 75%)}
-main,footer{position:relative;z-index:1}
-
-/* Responsive */
 @media(max-width:760px){
   nav ul{gap:16px;font-size:13px}
   .grid2,.proj,.edu{grid-template-columns:1fr;gap:14px}
   section{padding:60px 0}
   .hero{padding:64px 0 56px}
 }
-@media(max-width:600px){
-  .wrap{padding:0 20px}
-  nav{flex-direction:column;justify-content:center;align-items:flex-start;gap:8px;height:auto;padding:12px 0}
-  nav ul{flex-wrap:wrap;gap:10px 18px}
-}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-}
+#bg{position:fixed;inset:0;z-index:0;pointer-events:none;
+  -webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.4),#000 75%);mask-image:linear-gradient(90deg,rgba(0,0,0,.4),#000 75%)}
+main,footer{position:relative;z-index:1}
 </style>
 </head>
 <body>
 <canvas id="bg" aria-hidden="true"></canvas>
-
-<header><div class="wrap">
-  <nav aria-label="Main">
-    <a class="brand" href="#top">sarath<span>.</span>kc</a>
-    <ul>
-      <li><a href="#now">Now</a></li>
-      <li><a href="#work">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</div></header>
+<header><div class="wrap"><nav>
+  <a class="brand" href="#top">sarath<span>.</span>kc</a>
+  <ul><li><a href="#now">Now</a></li><li><a href="#work">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav></div></header>
 
 <main id="top">
-
-<!-- HERO -->
 <section class="hero"><div class="wrap">
   <div class="label">Portfolio</div>
-  <h1 class="name">Sarath K C</h1>
-  <p class="role">RTL Design &amp; Design Verification</p>
-  <p class="lead">M.Tech VLSI student with hands-on experience in RTL design and verification, working with SystemVerilog, SVA, UVM, and functional coverage to take blocks from specification through synthesis. Current focus: CXL.mem and LPDDR5X memory architectures.</p>
+  <h1><span class="name">Sarath K C</span><span class="role">RTL Design / Micro-Computer Architecture</span><span class="role">Design Verification</span></h1>
+  <p class="lead">M.Tech VLSI student focused on RTL design and design verification, with interests in SystemVerilog, SystemVerilog Assertions (SVA), functional coverage, and memory verification. Building toward UVM, CXL.mem, and LPDDR5X architectures through hands-on projects in synthesizable RTL and testbench development.</p>
   <div class="meta">
     <span><b>M.Tech</b> · RV College of Engineering, Bengaluru · 2025–2027</span>
     <span><b>Open to</b> RTL Design / DV roles</span>
@@ -170,14 +101,11 @@ main,footer{position:relative;z-index:1}
   </div>
   <div class="cta">
     <a class="btn fill" href="#work">View projects</a>
-    <!-- Upload your resume as resume.pdf next to index.html -->
-    <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
     <a class="btn" href="https://github.com/Sarath-ASIC" target="_blank" rel="noopener">GitHub</a>
     <a class="btn" href="#contact">Contact</a>
   </div>
 </div></section>
 
-<!-- CURRENTLY -->
 <section id="now"><div class="wrap">
   <div class="label">Currently</div>
   <div class="grid2">
@@ -186,25 +114,24 @@ main,footer{position:relative;z-index:1}
       <div class="now-item">
         <div class="status">Current</div>
         <h3>Intern — FPGA / RTL Design</h3>
-        <p class="org">KriSemi Design Technology · Bangalore · [Start month, year] – Present</p>
+        <p class="org">KriSemi Design Technology · Bangalore</p>
       </div>
     </div>
     <div>
-      <h2>Next project</h2>
+      <h2>Upcoming work</h2>
       <div class="now-item">
         <div class="status">Upcoming</div>
-        <h3>RTL design of a direct CXL-to-LPDDR5X interface for edge-AI super-nodes</h3>
+        <h3>RTL design of a Direct CXL to LPDDR5X for Edge AI super nodes</h3>
         <div class="tags"><span>CXL.mem</span><span>LPDDR5X</span><span>RTL Design</span><span>Edge AI</span></div>
       </div>
     </div>
   </div>
 </div></section>
 
-<!-- PROJECTS -->
 <section id="work"><div class="wrap">
   <div class="label">Selected work</div>
   <h2>Projects</h2>
-  <p class="intro">Projects spanning RTL design, verification, FPGA, and analog layout. Source code, testbenches, and reports are on GitHub.</p>
+  <p class="lead" style="margin-top:0;margin-bottom:34px">Each project is taken from specification to a verified, synthesized design. Source, testbench, and reports are linked on GitHub.</p>
 
   <article class="proj">
     <div class="side"><span class="st">RTL + UVM</span><br>SystemVerilog<br>Synopsys VCS · Genus</div>
@@ -212,12 +139,10 @@ main,footer{position:relative;z-index:1}
       <h3>SPI Full-Duplex Controller with CRC</h3>
       <p>Master/slave SPI controller with CRC-based data integrity checking, verified using a coverage-driven UVM environment.</p>
       <ul>
-        <li>Parameterized clock polarity and phase (CPOL/CPHA) with a registered, glitch-free SCLK</li>
-        <li>UVM agent and scoreboard with reference model; functional coverage closed at [XX]% across all four SPI modes</li>
-        <li>Synthesized with Cadence Genus; timing closed at [XX] MHz, area [XX] µm²</li>
+        <li>Parameterised clock polarity/phase (CPOL/CPHA) with a registered, glitch-free SCLK</li>
+        <li>UVM agent, scoreboard with reference model, functional coverage across all four SPI modes</li>
+        <li>Synthesized with Cadence Genus; timing and area reviewed per mode</li>
       </ul>
-      <div class="proj-links"><a href="https://github.com/Sarath-ASIC" target="_blank" rel="noopener">Source code ↗</a></div>
-      <!-- Replace the link above with this project's exact repo URL -->
       <div class="tags"><span>SystemVerilog</span><span>UVM</span><span>CDV</span><span>CRC</span><span>Genus</span></div>
     </div>
   </article>
@@ -226,13 +151,12 @@ main,footer{position:relative;z-index:1}
     <div class="side"><span class="st">RTL + UVM</span><br>SystemVerilog<br>Verilator · VCS</div>
     <div>
       <h3>SyncFlow — Synchronous / Asynchronous FIFO</h3>
-      <p>Parameterized FIFO with full, empty, and almost-full/almost-empty flags. The asynchronous variant uses Gray-coded pointers and two-flop synchronizers for clock domain crossing.</p>
+      <p>Parameterised FIFO with full/empty/almost-flag logic. The asynchronous variant uses Gray-coded pointers and two-flop synchronizers for clock domain crossing.</p>
       <ul>
-        <li>Pointer comparison logic ensures full and empty never assert incorrectly across clock domains</li>
-        <li>Randomized and directed tests ([XX] test cases) covering back-to-back, overflow, and underflow scenarios</li>
+        <li>Pointer comparison logic designed so full and empty never assert incorrectly across domains</li>
+        <li>Randomised and directed tests covering back-to-back, overflow, and underflow scenarios</li>
       </ul>
-      <div class="proj-links"><a href="https://github.com/Sarath-ASIC" target="_blank" rel="noopener">Source code ↗</a></div>
-      <div class="tags"><span>CDC</span><span>Gray code</span><span>Synchronizers</span><span>UVM</span><span>Verilator</span></div>
+      <div class="tags"><span>CDC</span><span>Gray code</span><span>UVM</span><span>Verilator</span></div>
     </div>
   </article>
 
@@ -240,13 +164,12 @@ main,footer{position:relative;z-index:1}
     <div class="side"><span class="st">RTL + UVM</span><br>SystemVerilog<br>OpenLane</div>
     <div>
       <h3>AXI4-Lite Peripheral Block</h3>
-      <p>AXI4-Lite slave with a register file, implementing the five-channel handshake and response signaling per the AMBA specification.</p>
+      <p>AXI4-Lite slave with a register file, implementing the five-channel handshake and response signalling per the AMBA specification.</p>
       <ul>
         <li>Independent read and write paths; correct VALID/READY handshake under back-pressure</li>
         <li>Protocol assertions (SVA) alongside UVM sequences for corner-case traffic</li>
-        <li>Taken through RTL-to-GDS implementation with OpenLane</li>
+        <li>Pushed through the Cadence RTL-to-GDS flow</li>
       </ul>
-      <div class="proj-links"><a href="https://github.com/Sarath-ASIC" target="_blank" rel="noopener">Source code ↗</a></div>
       <div class="tags"><span>AMBA AXI4-Lite</span><span>SVA</span><span>UVM</span><span>Synopsys VCS</span><span>Verdi</span></div>
     </div>
   </article>
@@ -257,10 +180,9 @@ main,footer{position:relative;z-index:1}
       <h3>Cache Controller</h3>
       <p>Cache controller with tag/index/offset addressing, hit/miss handling, and an FSM-driven refill and write policy against a memory model.</p>
       <ul>
-        <li>FSM states and replacement behavior documented with state diagrams</li>
-        <li>Scoreboard checks read data against a behavioral memory model for data correctness</li>
+        <li>FSM states and replacement behaviour documented with state diagrams</li>
+        <li>Scoreboard checks data coherence against a behavioural memory</li>
       </ul>
-      <div class="proj-links"><a href="https://github.com/Sarath-ASIC" target="_blank" rel="noopener">Source code ↗</a></div>
       <div class="tags"><span>FSM</span><span>Memory hierarchy</span><span>UVM</span></div>
     </div>
   </article>
@@ -269,7 +191,7 @@ main,footer{position:relative;z-index:1}
     <div class="side"><span class="st">In progress</span><br>SystemVerilog</div>
     <div>
       <h3>RV32I Pipelined Processor</h3>
-      <p>Five-stage RV32I core (IF, ID, EX, MEM, WB) with hazard detection, forwarding, and branch handling. Next steps: directed verification and synthesis with PPA reporting.</p>
+      <p>Five-stage RV32I core (IF, ID, EX, MEM, WB) with hazard detection, forwarding, and branch handling, targeting a verified and synthesized implementation with PPA reporting.</p>
       <div class="tags"><span>RISC-V</span><span>Pipelining</span><span>Hazards</span><span>PPA</span></div>
     </div>
   </article>
@@ -278,7 +200,7 @@ main,footer{position:relative;z-index:1}
     <div class="side"><span class="st">FPGA</span><br>Vivado</div>
     <div>
       <h3>TDC-to-SPI Interface with Async FIFO</h3>
-      <p>FPGA interface that moves time-to-digital converter (TDC) data into an SPI link across clock domains using an asynchronous FIFO.</p>
+      <p>FPGA interface that moves time-to-digital converter data into an SPI link across clock domains using an asynchronous FIFO.</p>
       <div class="tags"><span>FPGA</span><span>CDC</span><span>Vivado</span><span>SPI</span></div>
     </div>
   </article>
@@ -287,36 +209,29 @@ main,footer{position:relative;z-index:1}
     <div class="side"><span class="st">Analog layout</span><br>Cadence Virtuoso<br>45 nm CMOS</div>
     <div>
       <h3>8-bit Charge-Domain DAC Layout</h3>
-      <p>Full-custom layout of an 8-bit DAC in 45 nm CMOS, with attention to matching, symmetry, and parasitic-aware routing. Also designed an E-TSPC CMOS frequency divider.</p>
+      <p>Full-custom layout of an 8-bit DAC in 45 nm CMOS, with attention to matching, symmetry, and parasitic-aware routing. Also: E-TSPC / CMOS frequency divider design.</p>
       <div class="tags"><span>Virtuoso</span><span>DRC / LVS</span><span>Matching</span></div>
     </div>
   </article>
 </div></section>
 
-<!-- SKILLS -->
 <section id="skills"><div class="wrap">
   <div class="label">Capabilities</div>
   <div class="grid2">
     <div>
       <h2>Skills</h2>
-      <dl class="skills">
-        <dt>Design</dt>
-        <dd>SystemVerilog RTL, FSM design, FIFOs and CDC, AMBA AXI4-Lite, SPI, RISC-V (RV32I), computer organization and architecture</dd>
-        <dt>Verification</dt>
-        <dd>UVM, constrained-random testing, functional coverage, SVA, scoreboards and reference models</dd>
-        <dt>Implementation</dt>
-        <dd>Logic synthesis, static timing analysis (STA), physical design, Vivado FPGA flow</dd>
-        <dt>EDA Tools</dt>
-        <dd>Synopsys VCS, Verdi, Cadence Xcelium, Genus, Innovus, Tempus, Conformal, Virtuoso, StarRC, Vivado, Git</dd>
-        <dt>Languages</dt>
-        <dd>SystemVerilog, Python, Tcl, C</dd>
-        <dt>Platforms</dt>
-        <dd>Linux, Windows</dd>
+      <dl class="skills" style="margin-top:24px">
+        <dt>Design</dt><dd>SystemVerilog RTL, FSM design, FIFOs and CDC, AMBA AXI4-Lite, SPI, RISC-V, Computer Organization and Architecture </dd>
+        <dt>Verification</dt><dd>UVM, constrained-random testing, functional coverage, SVA, scoreboards and reference models</dd>
+        <dt>Implementation</dt><dd>Synthesis, static timing Analysis, Physical Deesign, , Vivado FPGA flow</dd>
+        <dt>Tools</dt><dd>Synopsys VCS, Xcelium, Conformal, Genus, Innovus, Tempus, StarcRC, Virtuoso, Vivado, Git</dd>
+        <dt>Programming Langauge</dt><dd>Python, TCL, C</dd>
+        <dt>OS</dt></dd> Windows, Linux </dd>
       </dl>
     </div>
     <div>
       <h2>Working flow</h2>
-      <p class="lead flush">The loop I follow for each block, so results are reproducible and reviewable.</p>
+      <p class="lead" style="margin-top:0">Every block follows the same loop, so results are reproducible and reviewable.</p>
       <div class="flow">
         <div>Spec</div><div class="on">RTL</div><div class="on">UVM</div><div>Coverage</div><div>Synthesis</div><div>STA</div>
       </div>
@@ -324,40 +239,116 @@ main,footer{position:relative;z-index:1}
   </div>
 </div></section>
 
-<!-- EDUCATION -->
 <section id="education"><div class="wrap">
   <div class="label">Background</div>
-  <h2 class="spaced">Education</h2>
-  <div class="edu">
-    <div class="when">2025 – 2027</div>
-    <div><b>M.Tech, VLSI Design and Embedded Systems</b><p>RV College of Engineering, Bengaluru, Karnataka</p></div>
-  </div>
-  <div class="edu">
-    <div class="when">2019 – 2023</div>
-    <div><b>B.Tech, Electronics and Communication Engineering</b><p>NSS College of Engineering, Palakkad, Kerala</p></div>
-  </div>
+  <h2 style="margin-bottom:26px">Education</h2>
+  <div class="edu"><div class="when">2025 – 2027</div><div><b>M.Tech, VLSI Design and Embedded Systems</b><p>RV College of Engineering, Bengaluru, Karnataka</p></div></div>
+  <div class="edu"><div class="when">B.Tech</div><div><b>B.Tech, Electronics and Communication Engineering</b><p>NSS College of Engineering, Palakkad, Kerala</p></div></div>
 </div></section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact"><div class="wrap">
   <div class="label">Contact</div>
-  <p class="lead">Looking for RTL design and design verification opportunities in Bengaluru.</p>
+  <p class="lead" style="margin:0 0 22px">Looking for RTL design and design verification opportunities in Bengaluru.</p>
   <a class="mail" href="mailto:sarathkcofficial@gmail.com">sarathkcofficial@gmail.com</a>
   <div class="links">
     <a href="https://github.com/Sarath-ASIC" target="_blank" rel="noopener">GitHub</a>
     <a href="https://www.linkedin.com/in/sarath-k-c-991890226/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
   </div>
 </div></section>
-
 </main>
 
-<footer><div class="wrap">© <span id="year">2026</span> Sarath K C</div></footer>
-
-<!-- PASTE YOUR EXISTING CANVAS ANIMATION SCRIPT HERE, UNCHANGED -->
-
+<footer><div class="wrap">© 2026 Sarath K C</div></footer>
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+/* Background: IC routing layer — orthogonal traces, die outlines, and signal pulses.
+   Static layer is drawn once; only the pulses animate. Honors prefers-reduced-motion. */
+(function(){
+  var c=document.getElementById('bg'); if(!c) return;
+  var x=c.getContext('2d'), G=40, TAIL=13, STEP=7;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W,H,dpr,paths,pulses,layer,last=0,timer;
+  var dirs=[[1,0],[0,1],[-1,0],[0,-1]];
+  function rnd(a,b){return a+Math.random()*(b-a)}
+  function ri(a,b){return Math.floor(rnd(a,b+1))}
+
+  function mk(pts){
+    var cum=[0],i,L=0;
+    for(i=1;i<pts.length;i++){
+      L+=Math.abs(pts[i][0]-pts[i-1][0])+Math.abs(pts[i][1]-pts[i-1][1]);
+      cum.push(L);
+    }
+    return {pts:pts,cum:cum,L:L};
+  }
+  function at(p,d){
+    d=Math.max(0,Math.min(p.L,d));
+    var i=1; while(i<p.cum.length-1&&p.cum[i]<d) i++;
+    var a=p.pts[i-1],b=p.pts[i],t=(d-p.cum[i-1])/((p.cum[i]-p.cum[i-1])||1);
+    return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t];
+  }
+
+  function build(){
+    dpr=Math.min(window.devicePixelRatio||1,2);
+    W=innerWidth; H=innerHeight;
+    c.width=W*dpr; c.height=H*dpr; c.style.width=W+'px'; c.style.height=H+'px';
+    paths=[]; pulses=[];
+    var n=Math.round(W*H/20000), i, s;
+    for(i=0;i<n;i++){
+      var px=ri(0,Math.floor(W/G))*G, py=ri(0,Math.floor(H/G))*G, d=ri(0,3), pts=[[px,py]], segs=ri(2,5);
+      for(s=0;s<segs;s++){
+        var len=ri(2,9)*G; px+=dirs[d][0]*len; py+=dirs[d][1]*len;
+        pts.push([px,py]); d=(d+(Math.random()<.5?1:3))%4;
+      }
+      var p=mk(pts); paths.push(p);
+      if(Math.random()<.5) pulses.push({p:p,d:-rnd(0,p.L),v:rnd(70,150)});
+    }
+
+    layer=document.createElement('canvas'); layer.width=W*dpr; layer.height=H*dpr;
+    var g=layer.getContext('2d'); g.scale(dpr,dpr);
+    g.fillStyle='rgba(108,86,54,.14)';
+    for(var gx=0;gx<=W;gx+=G) for(var gy=0;gy<=H;gy+=G) g.fillRect(gx-.5,gy-.5,1.5,1.5);
+    g.strokeStyle='rgba(108,86,54,.24)'; g.lineWidth=1.2; g.lineJoin='miter';
+    paths.forEach(function(p){
+      g.beginPath(); p.pts.forEach(function(q,k){k?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1])}); g.stroke();
+      [p.pts[0],p.pts[p.pts.length-1]].forEach(function(q){g.beginPath();g.arc(q[0],q[1],3,0,6.2832);g.stroke();});
+    });
+    /* die outlines with pin ticks */
+    g.strokeStyle='rgba(108,86,54,.38)'; g.lineWidth=1.4;
+    for(i=0;i<Math.max(2,Math.round(W*H/380000));i++){
+      var w=ri(3,5)*G,h=ri(2,4)*G,dx=ri(1,Math.max(1,Math.floor(W/G)-6))*G,dy=ri(1,Math.max(1,Math.floor(H/G)-5))*G;
+      g.fillStyle='rgba(9,9,7,.85)'; g.fillRect(dx,dy,w,h); g.strokeRect(dx,dy,w,h);
+      g.strokeRect(dx+G/2,dy+G/2,w-G,h-G);
+      for(var t=G/2;t<w;t+=G/2){g.beginPath();g.moveTo(dx+t,dy);g.lineTo(dx+t,dy-8);g.moveTo(dx+t,dy+h);g.lineTo(dx+t,dy+h+8);g.stroke();}
+      for(t=G/2;t<h;t+=G/2){g.beginPath();g.moveTo(dx,dy+t);g.lineTo(dx-8,dy+t);g.moveTo(dx+w,dy+t);g.lineTo(dx+w+8,dy+t);g.stroke();}
+    }
+    draw(0);
+  }
+
+  function draw(dt){
+    x.setTransform(dpr,0,0,dpr,0,0); x.clearRect(0,0,W,H); x.drawImage(layer,0,0,W,H);
+    if(reduce) return;
+    x.lineCap='round';
+    pulses.forEach(function(u){
+      u.d+=u.v*dt;
+      if(u.d>u.p.L+TAIL*STEP) u.d=-rnd(0,300);
+      if(u.d<0) return;
+      for(var k=0;k<TAIL;k++){
+        var d0=u.d-k*STEP; if(d0<0) break;
+        var a=at(u.p,Math.max(0,d0-STEP)),b=at(u.p,d0);
+        x.strokeStyle='rgba(181,148,103,'+(0.75*(1-k/TAIL)).toFixed(3)+')';
+        x.lineWidth=1.8; x.beginPath(); x.moveTo(a[0],a[1]); x.lineTo(b[0],b[1]); x.stroke();
+      }
+      if(u.d<=u.p.L){var h=at(u.p,u.d); x.fillStyle='rgba(214,185,140,.95)'; x.beginPath(); x.arc(h[0],h[1],2.2,0,6.2832); x.fill();}
+    });
+  }
+
+  function loop(ts){
+    var dt=Math.min((ts-last)/1000||0,.05); last=ts;
+    if(!document.hidden) draw(dt);
+    requestAnimationFrame(loop);
+  }
+  build();
+  if(!reduce) requestAnimationFrame(loop);
+  addEventListener('resize',function(){clearTimeout(timer);timer=setTimeout(build,250)});
+})();
 </script>
 </body>
 </html>
